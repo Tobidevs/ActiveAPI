@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./external.css">
+    <script src="./script.js" defer></script>
+    <title>AciveAPI</title>
+</head>
+<body class="bg-customBlack flex flex-col h-screen items-center justify-start font-poppins text-white">
+    <header class="w-full h-32 text-5xl font-poppins font-bold flex justify-center pt-16  ">ActiveAPI</header>
+    <h2 class="text-base w-3/4 flex justify-center items-center text-center ">ActiveAPI is a web application designed to help users discover exercises for various body 
+        parts and fitness goals. Leveraging the powerful ExerciseDB API, it offers a seamless way to explore workout routines, 
+        target specific muscles, and enhance fitness journeys.</h2>
+    <h1 class="flex items-center w-3/4 h-28 text-6xl font-bold ">Select an Exercise</h1>
+    <div class="w-5/6 h-2/3  flex ">
+        <section class="w-3/12 h-full  flex flex-col">
+            <h3 class="w-full flex justify-center text-3xl mb-14">Filter</h3>
+            <div class="w-full h-2/5 text-2xl flex flex-col items-center">
+                <div class="relative group h-12">
+                    <button class="filter-button h-12 duration-300 group-hover:text-purple-500">Body Part: All</button>
+                    <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-2 h-2 bg-customPurple rotate-45 group-hover:rotate-90 duration-200"></div>
+                    <div class="absolute top-0 left-full ml-2 text-xl w-40 flex flex-col rounded-2xl border-2 border-customPurple bg-customDarkPurple opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible">
+                        <a class="filter-option active filter-option-style">All</a>
+                        <a class="filter-option filter-option-style">Chest</a>
+                        <a class="filter-option filter-option-style ">Back</a>
+                        <a class="filter-option filter-option-style">Shoulders</a>
+                        <a class="filter-option filter-option-style">Upper Arms</a>
+                        <a class="filter-option filter-option-style">Lower Arms</a>
+                        <a class="filter-option filter-option-style">Core</a>
+                        <a class="filter-option filter-option-style">Upper Legs</a>
+                        <a class="filter-option filter-option-style">Lower Legs</a>
+                        <a class="filter-option filter-option-style">Cardio</a>
+                        <a class="filter-option filter-option-style">Waist</a>
+                        <a class="filter-option filter-option-style">Neck</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
