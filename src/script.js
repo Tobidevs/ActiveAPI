@@ -1,6 +1,10 @@
 import apiKey from "./config.js";
-const bodyPartOptions = document.querySelectorAll('.filter-option');
-const filterButton = document.querySelector('.filter-button');
+const TargetOptions = document.querySelectorAll('.T-filter-option');
+const T_filterButton = document.querySelector('.T-filter-button');
+const bodyPartOptions = document.querySelectorAll('.BP-filter-option');
+const BP_filterButton = document.querySelector('.BP-filter-button');
+
+
 const exerciseContainer = document.querySelector('.exercise-container');
 
 let offset = 0;
@@ -24,9 +28,9 @@ const displayExercises = (data) => {
     `).join('');
 }
 
-// Fetch exercises based on body part
-const getBodyPart = async (bodyPart) => {
-  const endpoint = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart.toLowerCase()}?offset=${offset}&limit=12`;
+// Fetch exercises
+const callApi = async (option, type) => {
+  const endpoint = `https://exercisedb.p.rapidapi.com/exercises/${type}/${option.toLowerCase()}?offset=${offset}&limit=12`;
   try {
     const response = await fetch(endpoint, options);
     if (!response.ok) {
@@ -40,12 +44,21 @@ const getBodyPart = async (bodyPart) => {
 }
 // Add event listener to each option
 bodyPartOptions.forEach(option => {
-  
   option.addEventListener('click', event => {
     bodyPartOptions.forEach(option => option.classList.remove('active'));
     event.currentTarget.classList.add('active');
     // Update filter button text and fetch exercises
-    filterButton.textContent = `Body Part: ${event.currentTarget.textContent}`;
-    getBodyPart(event.currentTarget.textContent);
+    BP_filterButton.textContent = `Body Part: ${event.currentTarget.textContent}`;
+    getBodyPart(event.currentTarget.textContent, "bodyPart");
+  });
+});
+
+TargetOptions.forEach(option => {
+  option.addEventListener('click', event => {
+    TargetOptions.forEach(option => option.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    // Update filter button text and fetch exercises
+    T_filterButton.textContent = `Target: ${event.currentTarget.textContent}`;
+    callApi(event.currentTarget.textContent, "target");
   });
 });
