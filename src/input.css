@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .filter-option-style {
-    @apply text-left block px-4 py-2 text-gray-500 duration-200 hover:text-white
+    @apply text-left block cursor-pointer px-4 py-2 text-gray-500 duration-200 hover:text-white
 }

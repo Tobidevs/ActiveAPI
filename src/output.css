@@ -554,6 +554,11 @@ video {
   display: none;
 }
 
+* {
+  scrollbar-color: initial;
+  scrollbar-width: initial;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -590,12 +595,20 @@ video {
   margin-left: 0.5rem;
 }
 
-.block {
-  display: block;
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .flex {
   display: flex;
+}
+
+.h-1\/3 {
+  height: 33.333333%;
 }
 
 .h-12 {
@@ -620,6 +633,10 @@ video {
 
 .h-32 {
   height: 8rem;
+}
+
+.h-\[58\.3\%\] {
+  height: 58.3%;
 }
 
 .h-full {
@@ -650,6 +667,18 @@ video {
   width: 83.333333%;
 }
 
+.w-6\/12 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -668,6 +697,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -680,12 +713,36 @@ video {
   justify-content: center;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .border-2 {
   border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-customPurple {
@@ -708,22 +765,8 @@ video {
   background-color: rgb(140 82 255 / var(--tw-bg-opacity, 1));
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .pt-16 {
   padding-top: 4rem;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .text-center {
@@ -800,8 +843,17 @@ video {
   transition-duration: 300ms;
 }
 
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 .filter-option-style {
   display: block;
+  cursor: pointer;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -817,9 +869,9 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-white:hover {
+.hover\:text-customPurple:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(140 82 255 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:visible {
