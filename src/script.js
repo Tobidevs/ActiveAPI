@@ -48,6 +48,18 @@ const callApi = async (option, type) => {
   }
 }
 
+// Add event listener to clear filters button
+clear_filters.addEventListener('click', () => {
+  bodyPartOptions.forEach(option => option.classList.remove('active'));
+  TargetOptions.forEach(option => option.classList.remove('active'));
+  EquipmentOptions.forEach(option => option.classList.remove('active'));
+  exerciseContainer.innerHTML = '';
+  exerciseContainer.innerHTML = '<div>Select an Exercise</div>';
+  BP_filterButton.textContent = 'Body Part';
+  T_filterButton.textContent = 'Target';
+  E_filterButton.textContent = 'Equipment';
+  exerciseContainer.classList.add('background');
+});
 
 // Add event listener to each option
 bodyPartOptions.forEach(option => {
